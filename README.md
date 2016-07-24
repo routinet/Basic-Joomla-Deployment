@@ -1,5 +1,7 @@
 # Basic-Joomla-Deployment
 
+Edit the script file to change the default ip.  Modify the template conf file as desired.
+
 Usage: ./build-new-site.sh -d <domain> [-f <file_domain>] [-i <ip>] [-t template_file] [-s]
 
     -d domain
