@@ -1,6 +1,6 @@
 #!/bin/bash
 
-default_ip=1.2.3.4
+default_ip=127.0.0.1
 
 usage() {
     echo "
@@ -94,12 +94,12 @@ then
 fi
 
 mkdir "/var/www/$file_domain"
-chown www-data:www-data "/var/www/$file_domain"
-chmod g+w "/var/www/$file_domain"
 cd "/var/www/$file_domain"
 wget $dl_url
 tar xzf $package_file
 rm $package_file
+chown -R www-data:www-data "/var/www/$file_domain"
+chmod -R g+w "/var/www/$file_domain"
 
 if [[ "$sandbox" -eq "1" ]]
 then
